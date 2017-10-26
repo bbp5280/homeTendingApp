@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-export const Aside = () => {
+const Aside = () => {
 
   return (
     <aside>
@@ -11,3 +11,5 @@ export const Aside = () => {
     </aside>
   );
 };
+
+export default Aside;
