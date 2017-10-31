@@ -41,26 +41,35 @@ class Messages extends Component {
   }
 
   render(){
+    const icon = { 'calendar-plus-o': 'left' };
     return (
-      <article>
-        <p>{this.props.message.message.owner}</p>
-        <p>{this.props.message.message.friendlyName}</p>
-        <p>{this.props.message.message.title}</p>
-        <p>{this.props.message.message.body}</p>
+      <article className='message-cards'>
+        <p className='message-text message-name'>
+          {this.props.message.message.owner}</p>
+        <p className='message-text message-name message-friendly'>
+          {this.props.message.message.friendlyName}</p>
+        <p className='message-text'>
+          {this.props.message.message.title}</p>
+        <p className='message-text'>
+          {this.props.message.message.body}</p>
         <input type='text'
           placeholder='date 1985-11-23'
           onChange={(event) => { this.handleInput('date', event); }}
+          className='message-input'
         />
         <input type='text'
           placeholder='Start Time 00:00:00'
           onChange={(event) => { this.handleInput('startTime', event); }}
+          className='message-input'
         />
         <input type='text'
           placeholder='End Time 00:00:00'
           onChange={(event) => { this.handleInput('endTime', event); }}
+          className='message-input'
         />
         <div>
-          <AddToCalendar event={this.setEvent()}/>
+          <AddToCalendar event={this.setEvent()}
+            buttonTemplate={icon} />
         </div>
       </article>
     );

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Messages from '../Messages/index';
+import Homes from '../Homes/index';
 import {
   addHouses,
   addMessages
@@ -18,21 +19,25 @@ class Catalog extends Component{
     this.props.addMessages(messages);
   }
 
-  buildMessages (messages){
-    if(this.props.location.pathname === '/admin/messages'){
-    return messages.map(message => {
-      return <Messages message={message}
-        key={message.id}/>;
-    });
+  buildMessages (messages, homes){
+    if (this.props.location.pathname === '/admin/messages'){
+      return messages.map(message => {
+        return <Messages message={message}
+          key={message.id}/>;
+    })
+  } else if(this.props.location.pathname === '/admin/properties'){
+      return homes.map(home => {
+        return <Homes home={home}
+          key={home.id}/>
+      })
   }
   }
 
   render() {
-
-    console.log(this.props);
+    console.log(this.props.homes);
     return (
       <section>
-        {this.buildMessages(this.props.messages)}
+        {this.buildMessages(this.props.messages, this.props.homes)}
       </section>
     );
   }
