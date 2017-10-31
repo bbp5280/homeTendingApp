@@ -7,7 +7,7 @@ import HomePageContent from '../HomePageContent/index';
 
 const App = () => {
   return (
-    <div>
+    <div className='wrapper-div'>
       <Header />
       <Route exact path='/' component={HomePageContent} />
       <Route path='/admin' component={Aside} />

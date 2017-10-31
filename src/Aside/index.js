@@ -4,10 +4,13 @@ import { NavLink } from 'react-router-dom';
 const Aside = () => {
 
   return (
-    <aside>
-      <NavLink to='/admin/messages'>Messages</NavLink>
-      <NavLink to='/admin/properties'>Properties</NavLink>
-      <NavLink to='/admin/create-invoice'>Create Invoice</NavLink>
+    <aside className='aside'>
+      <NavLink to='/admin/messages'
+        className='side-nav'>Messages</NavLink>
+      <NavLink to='/admin/properties'
+        className='side-nav'>Properties</NavLink>
+      <NavLink to='/admin/create-invoice'
+        className='side-nav'>Create Invoice</NavLink>
     </aside>
   );
 };

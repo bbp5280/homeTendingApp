@@ -1,0 +1,43 @@
+.header{
+  text-align: center;
+}
+
+.aside{
+  width: 15%;
+  display: inline-block;
+}
+
+.side-nav{
+  display: block;
+}
+
+.message-cards{
+  padding: 1em;
+  width: 80%;
+  display: inline-block;
+  margin: auto;
+  border: 1px solid;
+  float: right;
+}
+
+.message-name{
+  display: inline-block;
+}
+
+.message-friendly{
+  margin-left: 1em;
+}
+
+.message-input{
+  margin-bottom: 1em;
+}
+
+.wrapper-div{
+  height: 100%;
+}
+
+.react-add-to-calendar__button{
+  border: 1px solid;
+  padding: .2em;
+  margin-top: .5em;
+}
