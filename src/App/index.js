@@ -4,6 +4,7 @@ import Header from '../Header/index';
 import  Catalog  from '../Catalog/index';
 import Aside from '../Aside/index';
 import HomePageContent from '../HomePageContent/index';
+//import gapi from 'gapi';
 
 const App = () => {
   return (

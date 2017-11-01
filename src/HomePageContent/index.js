@@ -9,19 +9,35 @@ import {
   addMessages
 } from './actions';
 import { Link } from 'react-router-dom';
+import { fetchWeather } from '../api/api';
+import key from '../key';
+
 
 
 class HomePageContent extends Component{
+//   constructor(){
+//     super()
+//     this.state = {
+//       weather: {}
+//     }
+//   }
+//
+//   fetchWeather =  (location) => {
+//     fetch(`http://api.wunderground.com/api/${key}/conditions/forecast10day/hourly/q/${location}.json`)
+// .then(response => response.json())
+// .then( (data) =>  {return data})
+//   };
 
-
-  componentDidMount(){
-    this.props.addHouses(homes);
-    this.props.addMessages(messages);
+  async componentDidMount(){
+    const weather =  await fetchWeather(80128)
+    console.log(weather);
+    // this.props.addHouses(this.addWeatherToHomes());
+    // this.props.addMessages(messages);
 
   }
 
-
   render(){
+    console.log(fetchWeather(80128));
     return (
       <div>
         <Link to='/admin/messages'>Log In </Link>

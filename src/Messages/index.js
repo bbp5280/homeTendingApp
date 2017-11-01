@@ -41,7 +41,6 @@ class Messages extends Component {
   }
 
   render(){
-    const icon = { 'calendar-plus-o': 'left' };
     return (
       <article className='message-cards'>
         <p className='message-text message-name'>
@@ -68,8 +67,7 @@ class Messages extends Component {
           className='message-input'
         />
         <div>
-          <AddToCalendar event={this.setEvent()}
-            buttonTemplate={icon} />
+          <AddToCalendar event={this.setEvent()}/>
         </div>
       </article>
     );
