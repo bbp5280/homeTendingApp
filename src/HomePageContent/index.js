@@ -6,11 +6,12 @@ import {
 } from '../mockData/mockData';
 import {
   addHouses,
-  addMessages
+  addMessages,
+  addWeather
 } from './actions';
 import { Link } from 'react-router-dom';
-import { fetchWeather } from '../api/api';
-import key from '../key';
+// import { fetchWeather } from '../api/api';
+// import key from '../key';
 
 
 
@@ -29,15 +30,12 @@ class HomePageContent extends Component{
 //   };
 
   async componentDidMount(){
-    const weather =  await fetchWeather(80128)
-    console.log(weather);
-    // this.props.addHouses(this.addWeatherToHomes());
-    // this.props.addMessages(messages);
+    this.props.addHouses(homes);
+    this.props.addMessages(messages);
 
   }
 
   render(){
-    console.log(fetchWeather(80128));
     return (
       <div>
         <Link to='/admin/messages'>Log In </Link>
@@ -50,7 +48,8 @@ class HomePageContent extends Component{
 
 const mapDispatchToProps = (dispatch) => ({
   addHouses: (homes) => { dispatch(addHouses(homes)); },
-  addMessages: (messages) => { dispatch(addMessages(messages)); }
+  addMessages: (messages) => { dispatch(addMessages(messages)); },
+  addWeather: (weather) => { dispatch(addWeather(weather)); }
 });
 
 export default connect(null, mapDispatchToProps)(HomePageContent);

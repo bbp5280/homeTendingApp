@@ -15,3 +15,12 @@ export const messages = (state = [], action) => {
     return state;
   }
 };
+
+export const weather = (state = {}, action) => {
+  switch (action.type) {
+  case 'ADD_WEATHER':
+    return action.weather;
+  default:
+    return state;
+  }
+};

@@ -51,17 +51,17 @@ class Messages extends Component {
           {this.props.message.message.title}</p>
         <p className='message-text'>
           {this.props.message.message.body}</p>
-        <input type='text'
+        <input type='date'
           placeholder='date 1985-11-23'
           onChange={(event) => { this.handleInput('date', event); }}
           className='message-input'
         />
-        <input type='text'
+        <input type='time'
           placeholder='Start Time 00:00:00'
           onChange={(event) => { this.handleInput('startTime', event); }}
           className='message-input'
         />
-        <input type='text'
+        <input type='time'
           placeholder='End Time 00:00:00'
           onChange={(event) => { this.handleInput('endTime', event); }}
           className='message-input'

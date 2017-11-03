@@ -7,3 +7,8 @@ export const addMessages = (messages) => ({
   type: 'ADD_MESSAGES',
   messages
 });
+
+export const addWeather = (weather) => ({
+  type: 'ADD_WEATHER',
+  weather
+});
