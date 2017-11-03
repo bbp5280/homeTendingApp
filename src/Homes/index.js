@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Homes = ({home}) => {
+const Homes = ({ home }) => {
   return (
     <article className='message-cards'>
       <p className='message-text message-name'>

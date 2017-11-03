@@ -10,38 +10,43 @@ import {
   homes,
   messages
 } from '../mockData/mockData';
+import PropTypes from 'prop-types';
 
 
 
 class Catalog extends Component{
-  componentDidMount(){
+  async componentDidMount(){
     this.props.addHouses(homes);
     this.props.addMessages(messages);
   }
 
-  buildMessages (messages, homes){
-    if (this.props.location.pathname === '/admin/messages'){
-      return messages.map(message => {
-        return <Messages message={message}
-          key={message.id}/>;
-    })
-  } else if(this.props.location.pathname === '/admin/properties'){
-      return homes.map(home => {
-        return <Homes home={home}
-          key={home.id}/>
-      })
-  }
+  buildMessages (display, AddComponent){
+    return display.map(toDisplay => {
+      return <AddComponent message={toDisplay}
+        home={toDisplay}
+        key={toDisplay.id}/>;
+    });
   }
 
   render() {
-    console.log(this.props.homes);
     return (
       <section>
-        {this.buildMessages(this.props.messages, this.props.homes)}
+        {this.props.location.pathname === '/admin/messages' &&
+        this.buildMessages(this.props.messages, Messages)}
+        {this.props.location.pathname === '/admin/properties' &&
+        this.buildMessages(this.props.homes, Homes)}
       </section>
     );
   }
 }
+
+Catalog.propTypes = {
+  messages: PropTypes.array,
+  homes: PropTypes.array,
+  location: PropTypes.object,
+  addHouses: PropTypes.func,
+  addMessages: PropTypes.func
+};
 
 const mapStateToProps =  (store) => ({
   messages: store.messages,

@@ -6,20 +6,34 @@ import {
 } from '../mockData/mockData';
 import {
   addHouses,
-  addMessages
+  addMessages,
+  addWeather
 } from './actions';
 import { Link } from 'react-router-dom';
+// import { fetchWeather } from '../api/api';
+// import key from '../key';
+
 
 
 class HomePageContent extends Component{
+//   constructor(){
+//     super()
+//     this.state = {
+//       weather: {}
+//     }
+//   }
+//
+//   fetchWeather =  (location) => {
+//     fetch(`http://api.wunderground.com/api/${key}/conditions/forecast10day/hourly/q/${location}.json`)
+// .then(response => response.json())
+// .then( (data) =>  {return data})
+//   };
 
-
-  componentDidMount(){
+  async componentDidMount(){
     this.props.addHouses(homes);
     this.props.addMessages(messages);
 
   }
-
 
   render(){
     return (
@@ -34,7 +48,8 @@ class HomePageContent extends Component{
 
 const mapDispatchToProps = (dispatch) => ({
   addHouses: (homes) => { dispatch(addHouses(homes)); },
-  addMessages: (messages) => { dispatch(addMessages(messages)); }
+  addMessages: (messages) => { dispatch(addMessages(messages)); },
+  addWeather: (weather) => { dispatch(addWeather(weather)); }
 });
 
 export default connect(null, mapDispatchToProps)(HomePageContent);
