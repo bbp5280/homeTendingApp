@@ -6,18 +6,19 @@ import {
   addHouses,
   addMessages
 } from '../HomePageContent/actions';
-// import {messageToCards} from './actions';
-// import {
-//   homes,
-//   messages
-// } from '../mockData/mockData';
+import {
+  homes,
+  messages
+} from '../mockData/mockData';
 import PropTypes from 'prop-types';
 
 class Catalog extends Component{
   async componentDidMount(){
-    // this.props.addHouses(homes);
+    this.props.addHouses(homes);
     // this.props.addMessages(messages);
   }
+
+
 
   buildCards (display, AddComponent){
     return display.map(toDisplay => {
@@ -48,6 +49,8 @@ class Catalog extends Component{
   removeMessage(message){
     this.props.messages.splice(message, 1);
   }
+
+
 
   render() {
     return (
