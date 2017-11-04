@@ -69,7 +69,9 @@ class Messages extends Component {
         <div>
           <AddToCalendar event={this.setEvent()}/>
           <button
-            onClick={(message)=> this.props.clickEvent(this.props.message)}>
+            onClick={(message) => this.props.clickEvent(this.props.message,
+              this.state.date, this.state.startTime,
+              this.state.endTime)}>
             Scheduled
           </button>
         </div>
