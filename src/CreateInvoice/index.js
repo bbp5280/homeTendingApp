@@ -10,16 +10,23 @@ export default class CreateInvoice extends Component{
       homeOwner: '',
       descriptionOfWork: '',
       total: ''
-
-
     };
   }
 
   render () {
     return (
-      <form>
-
-      </form>
+      <div className='outer-modal'>
+        <form className='inner-modal'>
+          <input type='text' placeholder='Description of work' />
+          <input type='text' placeholder='Line Item' />
+          <input type='text' placeholder='Amount' />
+          <input type='text' placeholder='Line Item' />
+          <input type='text' placeholder='Amount' />
+          <input type='text' placeholder='Line Item' />
+          <input type='text' placeholder='Amount' />
+          <button onClick={this.props.cancel}>Cancel</button>
+        </form>
+      </div>
     );
   }
 }
