@@ -6,35 +6,44 @@ import {
   addHouses,
   addMessages
 } from '../HomePageContent/actions';
-import {
-  homes,
-  messages
-} from '../mockData/mockData';
+// import {messageToCards} from './actions';
+// import {
+//   homes,
+//   messages
+// } from '../mockData/mockData';
 import PropTypes from 'prop-types';
-
-
 
 class Catalog extends Component{
   async componentDidMount(){
-    this.props.addHouses(homes);
-    this.props.addMessages(messages);
+    // this.props.addHouses(homes);
+    // this.props.addMessages(messages);
   }
 
-  buildMessages (display, AddComponent){
+  buildCards (display, AddComponent){
     return display.map(toDisplay => {
       return <AddComponent message={toDisplay}
+        clickEvent={this.addMessagesToProperty.bind(this)}
         home={toDisplay}
         key={toDisplay.id}/>;
     });
+  }
+
+  addMessagesToProperty(message){
+    const homesWithUpdate = this.props.homes.map(home => {
+      return home.id === message.message.houseID
+        ? Object.assign({}, home, {messages:[...home.messages, message]}, {addAThing: 'AThing'}) :
+        home;
+    });
+    return this.props.addHouses(homesWithUpdate);
   }
 
   render() {
     return (
       <section>
         {this.props.location.pathname === '/admin/messages' &&
-        this.buildMessages(this.props.messages, Messages)}
+        this.buildCards(this.props.messages, Messages)}
         {this.props.location.pathname === '/admin/properties' &&
-        this.buildMessages(this.props.homes, Homes)}
+        this.buildCards(this.props.homes, Homes)}
       </section>
     );
   }
@@ -45,7 +54,8 @@ Catalog.propTypes = {
   homes: PropTypes.array,
   location: PropTypes.object,
   addHouses: PropTypes.func,
-  addMessages: PropTypes.func
+  addMessages: PropTypes.func,
+  messageToCards: PropTypes.func
 };
 
 const mapStateToProps =  (store) => ({
@@ -56,6 +66,7 @@ const mapStateToProps =  (store) => ({
 const mapDispatchToProps = (dispatch) => ({
   addHouses: (homes) => { dispatch(addHouses(homes)); },
   addMessages: (messages) => { dispatch(addMessages(messages)); }
+  // messageToCards:(updatedHome) => { dispatch(messageToCards(updatedHome)); }
 });
 
 
