@@ -30,11 +30,11 @@ class Catalog extends Component{
 
   addMessagesToProperty(message){
     const homesWithUpdate = this.props.homes.map(home => {
-      return home.id === message.message.houseID
-        ? Object.assign({}, home, {messages:[...home.messages, message]}, {addAThing: 'AThing'}) :
+      return home.id === message.message.houseID ? Object.assign({}, home, {messages:[...home.messages, message]}) :
         home;
     });
-    return this.props.addHouses(homesWithUpdate);
+    this.props.addHouses(homesWithUpdate);
+    this.props.messages.splice(message, 1);
   }
 
   render() {
