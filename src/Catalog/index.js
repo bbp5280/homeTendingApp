@@ -28,12 +28,24 @@ class Catalog extends Component{
     });
   }
 
-  addMessagesToProperty(message){
-    const homesWithUpdate = this.props.homes.map(home => {
-      return home.id === message.message.houseID ? Object.assign({}, home, {messages:[...home.messages, message]}) :
+  addMessagesToProperty(message, date, startTime, endTime){
+    this.props.addHouses(
+      this.updateHomeWithMessage(message, date, startTime, endTime)
+    );
+    this.removeMessage(message);
+  }
+
+  updateHomeWithMessage(message, date, startTime, endTime){
+    return this.props.homes.map(home => {
+      return home.id === message.message.houseID ? Object.assign({}, home,
+        {messages:[...home.messages, message]}, {date: date,
+          startTime: startTime,
+          endTime: endTime}) :
         home;
     });
-    this.props.addHouses(homesWithUpdate);
+  }
+
+  removeMessage(message){
     this.props.messages.splice(message, 1);
   }
 
