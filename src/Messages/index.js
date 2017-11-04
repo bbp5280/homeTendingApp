@@ -66,7 +66,7 @@ class Messages extends Component {
           onChange={(event) => { this.handleInput('endTime', event); }}
           className='message-input'
         />
-        <div>
+        <div onClick={(message)=> this.props.clickEvent(this.props.message)}>
           <AddToCalendar event={this.setEvent()}/>
         </div>
       </article>
