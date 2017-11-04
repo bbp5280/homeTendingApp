@@ -24,3 +24,12 @@ export const weather = (state = {}, action) => {
     return state;
   }
 };
+
+export const invoices = (state = [], action) => {
+  switch (action.type) {
+  case 'ADD_INVOICE':
+    return action.invoice;
+  default:
+    return state;
+  }
+};

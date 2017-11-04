@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {
   homes,
-  messages
+  messages,
+  invoices
 } from '../mockData/mockData';
 import {
   addHouses,
   addMessages,
-  addWeather
+  addWeather,
+  addInvoices
 } from './actions';
 import { Link } from 'react-router-dom';
 // import { fetchWeather } from '../api/api';
@@ -32,6 +34,7 @@ class HomePageContent extends Component{
   async componentDidMount(){
     this.props.addHouses(homes);
     this.props.addMessages(messages);
+    this.props.addInvoices(invoices);
 
   }
 
@@ -49,7 +52,8 @@ class HomePageContent extends Component{
 const mapDispatchToProps = (dispatch) => ({
   addHouses: (homes) => { dispatch(addHouses(homes)); },
   addMessages: (messages) => { dispatch(addMessages(messages)); },
-  addWeather: (weather) => { dispatch(addWeather(weather)); }
+  addWeather: (weather) => { dispatch(addWeather(weather)); },
+  addInvoices: (invoice) => { dispatch(addInvoices(invoice)); }
 });
 
 export default connect(null, mapDispatchToProps)(HomePageContent);

@@ -78,7 +78,6 @@ const mapStateToProps =  (store) => ({
 const mapDispatchToProps = (dispatch) => ({
   addHouses: (homes) => { dispatch(addHouses(homes)); },
   addMessages: (messages) => { dispatch(addMessages(messages)); }
-  // messageToCards:(updatedHome) => { dispatch(messageToCards(updatedHome)); }
 });
 
 
