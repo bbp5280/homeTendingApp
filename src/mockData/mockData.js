@@ -146,3 +146,5 @@ export const messages = [{
      because I'm involved.`
   }
 }];
+
+export const invoices = [];
