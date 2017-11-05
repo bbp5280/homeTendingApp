@@ -21,36 +21,42 @@ class Catalog extends Component{
 
 
   buildCards (display, AddComponent){
-    return display.map(toDisplay => {
+    return display.map((toDisplay, index) => {
       return <AddComponent message={toDisplay}
         clickEvent={this.addMessagesToProperty.bind(this)}
         home={toDisplay}
-        key={toDisplay.id}/>;
+        key={index + Date.now()}/>;
     });
   }
 
-  addMessagesToProperty(message, date, startTime, endTime){
+  addMessagesToProperty(messageOrInvoice){
     this.props.addHouses(
-      this.updateHomeWithMessage(message, date, startTime, endTime)
+      this.updateHomeWithMessage(messageOrInvoice)
     );
-    this.removeMessage(message);
+    if (messageOrInvoice.message){
+      this.removeMessage(messageOrInvoice);
+    }
   }
 
-  updateHomeWithMessage(message, date, startTime, endTime){
-    return this.props.homes.map(home => {
-      return home.id === message.message.houseID ? Object.assign({}, home,
-        {messages:[...home.messages, message]}, {date,
-          startTime,
-          endTime}) :
-        home;
-    });
+  updateHomeWithMessage(messageOrInvoice){
+    if (messageOrInvoice.message){
+      return this.props.homes.map(home => {
+        return home.id === messageOrInvoice.houseID ? Object.assign({}, home,
+          {messages:[...home.messages, messageOrInvoice]}, ) :
+          home;
+      });
+    } else if (!messageOrInvoice.message) {
+      return this.props.homes.map(home => {
+        return home.id === messageOrInvoice.houseID ? Object.assign({},
+          {invoices: home.invoices.push(messageOrInvoice)}, home) :
+          home;
+      });
+    }
   }
 
   removeMessage(message){
     this.props.messages.splice(message, 1);
   }
-
-
 
   render() {
     return (

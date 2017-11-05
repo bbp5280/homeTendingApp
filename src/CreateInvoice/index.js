@@ -12,7 +12,6 @@ export default class CreateInvoice extends Component{
       homeOwner: '',
       homeFriendlyName: '',
       descriptionOfWork: '',
-      total: 0,
       lineItem: '',
       amount: '',
       runningTotal:[],
@@ -80,7 +79,6 @@ export default class CreateInvoice extends Component{
 
 
   render () {
-    console.log(this.state);
     return (
       <div className='outer-modal'>
         <form className='inner-modal'>
@@ -110,8 +108,13 @@ export default class CreateInvoice extends Component{
             Add
           </button>
           {this.buildLineItems()}
-          <button onClick={(event) => this.props.cancel(event)}>Cancel</button>
           <p>Total: {this.calculateTotal()}</p>
+          <button onClick={(event) => this.props.cancel(event)}>
+            Cancel
+          </button>
+          <button onClick={(state) => this.props.submitInvoice(this.state)}>
+            Submit
+          </button>
         </form>
       </div>
     );
@@ -120,5 +123,6 @@ export default class CreateInvoice extends Component{
 
 CreateInvoice.propTypes = {
   cancel: PropTypes.func,
-  home: PropTypes.object
+  home: PropTypes.object,
+  submitInvoice: PropTypes.func
 };

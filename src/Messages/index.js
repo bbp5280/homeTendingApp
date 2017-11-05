@@ -40,6 +40,19 @@ class Messages extends Component {
     });
   }
 
+  updatedMessageObject(){
+    let dateOfWork = this.state.date;
+    let startTime = this.state.startTime;
+    let endTime = this.state.endTime;
+    let messageObject = Object.assign({},
+      this.props.message.message,
+      {dateOfWork,
+        startTime,
+        endTime
+      });
+    return Object.assign({}, this.props.message, {message: messageObject});
+  }
+
   render(){
     return (
       <article className='message-cards'>
@@ -69,9 +82,7 @@ class Messages extends Component {
         <div>
           <AddToCalendar event={this.setEvent()}/>
           <button
-            onClick={(message) => this.props.clickEvent(this.props.message,
-              this.state.date, this.state.startTime,
-              this.state.endTime)}>
+            onClick={(message) => this.props.clickEvent(this.updatedMessageObject())}>
             Scheduled
           </button>
         </div>
