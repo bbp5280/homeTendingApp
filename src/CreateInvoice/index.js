@@ -10,8 +10,12 @@ export default class CreateInvoice extends Component{
       houseID: '',
       houseAddress: '',
       homeOwner: '',
+      homeFriendlyName: '',
       descriptionOfWork: '',
-      total: '',
+      total: 0,
+      lineItem: '',
+      amount: '',
+      runningTotal:[],
       date: this.setDate()
     };
   }
@@ -21,7 +25,8 @@ export default class CreateInvoice extends Component{
       houseID: this.props.home.id,
       houseAddress: `${this.props.home.street} ${this.props.home.city}, ` +
       `${this.props.home.stateShort}, ${this.props.home.zip}`,
-      homeOwner: `${this.props.home.ownerFirst} ${this.props.home.ownerLast}`
+      homeOwner: `${this.props.home.ownerFirst} ${this.props.home.ownerLast}`,
+      homeFriendlyName: this.props.home.friendlyName
     });
   }
 
@@ -39,19 +44,74 @@ export default class CreateInvoice extends Component{
     return `${month}/${day}/${year}`;
   }
 
+  handleInvoiceInput (field, event){
+    this.setState({
+      [field]: event.target.value
+    });
+  }
+
+  updateRunningTotal(event){
+    event.preventDefault();
+    let lineItem = this.state.lineItem;
+    let amount = this.state.amount;
+    this.setState({
+      runningTotal: [...this.state.runningTotal,
+        Object.assign({}, {lineItem,
+          amount})],
+      lineItem:'',
+      amount:''
+    });
+  }
+
+  buildLineItems(){
+    return this.state.runningTotal.map(item => {
+      return <div key={`${item.lineItem}${item.amount}`}>
+        <p>{item.lineItem}</p>
+        <p>{item.amount}</p>
+      </div>;
+    });
+  }
+
+  calculateTotal(){
+    return this.state.runningTotal.reduce((acc, { amount }) => {
+      return acc += parseFloat(amount);
+    }, 0);
+  }
+
+
   render () {
     console.log(this.state);
     return (
       <div className='outer-modal'>
         <form className='inner-modal'>
-          <input type='text' placeholder='Description of work' />
-          <input type='text' placeholder='Line Item' />
-          <input type='text' placeholder='Amount' />
-          <input type='text' placeholder='Line Item' />
-          <input type='text' placeholder='Amount' />
-          <input type='text' placeholder='Line Item' />
-          <input type='text' placeholder='Amount' />
-          <button onClick={this.props.cancel}>Cancel</button>
+          <p>Owner: {this.state.homeOwner}</p>
+          <p>HouseName: {this.state.homeFriendlyName}</p>
+          <p>Address: {this.state.houseAddress}</p>
+          <input type='text'
+            placeholder='Description of work'
+            onChange={(event) => {
+              this.handleInvoiceInput('descriptionOfWork', event);
+            }}/>
+          <input type='text'
+            placeholder='Line Item'
+            onChange={(event) => {
+              this.handleInvoiceInput('lineItem', event);
+            }}
+            value={this.state.lineItem}/>
+          <input type='number'
+            min='0.00'
+            step='0.01'
+            placeholder='Amount'
+            onChange={(event) => {
+              this.handleInvoiceInput('amount', event);
+            }}
+            value={this.state.amount}/>
+          <button onClick={(event) => this.updateRunningTotal(event)}>
+            Add
+          </button>
+          {this.buildLineItems()}
+          <button onClick={(event) => this.props.cancel(event)}>Cancel</button>
+          <p>Total: {this.calculateTotal()}</p>
         </form>
       </div>
     );

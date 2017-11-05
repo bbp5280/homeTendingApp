@@ -10,7 +10,8 @@ class Homes extends Component  {
     };
   }
 
-  handleModal(){
+  handleModal(event){
+    event.preventDefault();
     this.setState({
       modalOpen: !this.state.modalOpen
     });
@@ -36,7 +37,7 @@ class Homes extends Component  {
           {this.props.home.discription}</p>
         <button onClick={this.handleModal.bind(this)}>Create Invoice</button>
         {this.state.modalOpen && <CreateInvoice
-          cancel={this.handleModal}
+          cancel={this.handleModal.bind(this)}
           home={this.props.home}/>}
       </article>
     );
