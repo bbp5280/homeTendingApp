@@ -37,6 +37,7 @@ class Homes extends Component  {
           {this.props.home.discription}</p>
         <button onClick={this.handleModal.bind(this)}>Create Invoice</button>
         {this.state.modalOpen && <CreateInvoice
+          submitInvoice={this.props.clickEvent}
           cancel={this.handleModal.bind(this)}
           home={this.props.home}/>}
       </article>
@@ -45,7 +46,8 @@ class Homes extends Component  {
 }
 
 Homes.propTypes = {
-  home: PropTypes.object
+  home: PropTypes.object,
+  clickEvent: PropTypes.func
 };
 
 export default Homes;

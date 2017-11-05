@@ -81,6 +81,7 @@ export const homes = [{
 
 export const messages = [{
   id: 1,
+  houseID:1,
   message: {
     owner: 'Jane Doe',
     friendlyName: 'Skelitor House',
@@ -94,6 +95,7 @@ export const messages = [{
 },
 {
   id: 2,
+  houseID: 1,
   message: {
     owner: 'Jane Doe',
     friendlyName: 'Skelitor House',
@@ -108,6 +110,7 @@ export const messages = [{
 },
 {
   id: 3,
+  houseID: 3,
   message: {
     owner: 'Dexter Morgan',
     friendlyName: 'Adobe House',
@@ -121,6 +124,7 @@ export const messages = [{
 },
 {
   id: 4,
+  houseID: 2,
   message: {
     owner: 'John Doe',
     friendlyName: 'House of Stumps',
@@ -134,6 +138,7 @@ export const messages = [{
 },
 {
   id: 5,
+  houseID: 4, 
   message: {
     owner: 'The Dread Pirate Roberts',
     friendlyName:'House on the Hill',
