@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import CreateInvoice from '../CreateInvoice/index'
+import CreateInvoice from '../CreateInvoice/index';
 
 class Homes extends Component  {
   constructor(){
@@ -10,16 +10,13 @@ class Homes extends Component  {
     };
   }
 
-  handleModal (){
-    console.log(this.state.modalOpen);
+  handleModal(){
     this.setState({
       modalOpen: !this.state.modalOpen
     });
-    console.log(this.state);
   }
 
   render() {
-    console.log(this.state);
     return (
       <article className='message-cards'>
         <p className='message-text message-name'>
@@ -39,7 +36,8 @@ class Homes extends Component  {
           {this.props.home.discription}</p>
         <button onClick={this.handleModal.bind(this)}>Create Invoice</button>
         {this.state.modalOpen && <CreateInvoice
-          cancel={this.handleModal}/>}
+          cancel={this.handleModal}
+          home={this.props.home}/>}
       </article>
     );
   }

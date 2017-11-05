@@ -81,7 +81,8 @@ class Messages extends Component {
 }
 
 Messages.propTypes = {
-  message: PropTypes.object
+  message: PropTypes.object,
+  clickEvent: PropTypes.func
 };
 
 export default Messages;
