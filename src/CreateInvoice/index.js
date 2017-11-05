@@ -12,8 +12,10 @@ export default class CreateInvoice extends Component{
       homeOwner: '',
       homeFriendlyName: '',
       descriptionOfWork: '',
-      total: '',
-      inputs:[],
+      total: 0,
+      lineItem: '',
+      amount: '',
+      runningTotal:[],
       date: this.setDate()
     };
   }
@@ -48,6 +50,35 @@ export default class CreateInvoice extends Component{
     });
   }
 
+  updateRunningTotal(event){
+    event.preventDefault();
+    let lineItem = this.state.lineItem;
+    let amount = this.state.amount;
+    this.setState({
+      runningTotal: [...this.state.runningTotal,
+        Object.assign({}, {lineItem,
+          amount})],
+      lineItem:'',
+      amount:''
+    });
+  }
+
+  buildLineItems(){
+    return this.state.runningTotal.map(item => {
+      return <div key={`${item.lineItem}${item.amount}`}>
+        <p>{item.lineItem}</p>
+        <p>{item.amount}</p>
+      </div>;
+    });
+  }
+
+  calculateTotal(){
+    return this.state.runningTotal.reduce((acc, { amount }) => {
+      return acc += parseFloat(amount);
+    }, 0);
+  }
+
+
   render () {
     console.log(this.state);
     return (
@@ -64,22 +95,23 @@ export default class CreateInvoice extends Component{
           <input type='text'
             placeholder='Line Item'
             onChange={(event) => {
-              this.handleInvoiceInput('lineItem'+1, event);
-            }}/>
-          <input type='text' placeholder='Amount' />
-          <input type='text'
-            placeholder='Line Item'
+              this.handleInvoiceInput('lineItem', event);
+            }}
+            value={this.state.lineItem}/>
+          <input type='number'
+            min='0.00'
+            step='0.01'
+            placeholder='Amount'
             onChange={(event) => {
-              this.handleInvoiceInput('lineItem'+2, event);
-            }}/>
-          <input type='text' placeholder='Amount' />
-          <input type='text'
-            placeholder='Line Item'
-            onChange={(event) => {
-              this.handleInvoiceInput('lineItem'+3, event);
-            }}/>
-          <input type='text' placeholder='Amount' />
-          <button onClick={this.props.cancel}>Cancel</button>
+              this.handleInvoiceInput('amount', event);
+            }}
+            value={this.state.amount}/>
+          <button onClick={(event) => this.updateRunningTotal(event)}>
+            Add
+          </button>
+          {this.buildLineItems()}
+          <button onClick={(event) => this.props.cancel(event)}>Cancel</button>
+          <p>Total: {this.calculateTotal()}</p>
         </form>
       </div>
     );
