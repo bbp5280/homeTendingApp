@@ -10,8 +10,10 @@ export default class CreateInvoice extends Component{
       houseID: '',
       houseAddress: '',
       homeOwner: '',
+      homeFriendlyName: '',
       descriptionOfWork: '',
       total: '',
+      inputs:[],
       date: this.setDate()
     };
   }
@@ -21,7 +23,8 @@ export default class CreateInvoice extends Component{
       houseID: this.props.home.id,
       houseAddress: `${this.props.home.street} ${this.props.home.city}, ` +
       `${this.props.home.stateShort}, ${this.props.home.zip}`,
-      homeOwner: `${this.props.home.ownerFirst} ${this.props.home.ownerLast}`
+      homeOwner: `${this.props.home.ownerFirst} ${this.props.home.ownerLast}`,
+      homeFriendlyName: this.props.home.friendlyName
     });
   }
 
@@ -39,17 +42,42 @@ export default class CreateInvoice extends Component{
     return `${month}/${day}/${year}`;
   }
 
+  handleInvoiceInput (field, event){
+    this.setState({
+      [field]: event.target.value
+    });
+  }
+
   render () {
     console.log(this.state);
     return (
       <div className='outer-modal'>
         <form className='inner-modal'>
-          <input type='text' placeholder='Description of work' />
-          <input type='text' placeholder='Line Item' />
+          <p>Owner: {this.state.homeOwner}</p>
+          <p>HouseName: {this.state.homeFriendlyName}</p>
+          <p>Address: {this.state.houseAddress}</p>
+          <input type='text'
+            placeholder='Description of work'
+            onChange={(event) => {
+              this.handleInvoiceInput('descriptionOfWork', event);
+            }}/>
+          <input type='text'
+            placeholder='Line Item'
+            onChange={(event) => {
+              this.handleInvoiceInput('lineItem'+1, event);
+            }}/>
           <input type='text' placeholder='Amount' />
-          <input type='text' placeholder='Line Item' />
+          <input type='text'
+            placeholder='Line Item'
+            onChange={(event) => {
+              this.handleInvoiceInput('lineItem'+2, event);
+            }}/>
           <input type='text' placeholder='Amount' />
-          <input type='text' placeholder='Line Item' />
+          <input type='text'
+            placeholder='Line Item'
+            onChange={(event) => {
+              this.handleInvoiceInput('lineItem'+3, event);
+            }}/>
           <input type='text' placeholder='Amount' />
           <button onClick={this.props.cancel}>Cancel</button>
         </form>

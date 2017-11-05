@@ -39,9 +39,9 @@ class Catalog extends Component{
   updateHomeWithMessage(message, date, startTime, endTime){
     return this.props.homes.map(home => {
       return home.id === message.message.houseID ? Object.assign({}, home,
-        {messages:[...home.messages, message]}, {date: date,
-          startTime: startTime,
-          endTime: endTime}) :
+        {messages:[...home.messages, message]}, {date,
+          startTime,
+          endTime}) :
         home;
     });
   }
