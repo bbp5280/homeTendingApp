@@ -12,7 +12,6 @@ import PropTypes from 'prop-types';
 class Catalog extends Component{
   constructor(){
     super();
-
     this.addMessagesOrInvoiceToProperty = this.addMessagesOrInvoiceToProperty.bind(this);
   }
 

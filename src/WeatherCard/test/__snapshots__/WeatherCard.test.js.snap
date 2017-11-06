@@ -1,0 +1,230 @@
+exports[`CardCatalog snapshot should always match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    close={[Function]}
+    conditions="cloudy"
+    high="32"
+    icon="http://www.nordzenterprises.com/hometending/wp-content/uploads/2015/08/cool-backgrounds9-e1440776175281.jpg"
+    low="98" />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <img
+          alt="showing cloudy conditions"
+          src="http://www.nordzenterprises.com/hometending/wp-content/uploads/2015/08/cool-backgrounds9-e1440776175281.jpg" />,
+        <p>
+          cloudy
+</p>,
+        <p>
+          High: 
+          32
+</p>,
+        <p>
+          Low: 
+          98
+</p>,
+        <button
+          onClick={[Function]}>
+          Close
+</button>,
+      ],
+      "className": "weather-card",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "showing cloudy conditions",
+          "src": "http://www.nordzenterprises.com/hometending/wp-content/uploads/2015/08/cool-backgrounds9-e1440776175281.jpg",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "cloudy",
+        },
+        "ref": null,
+        "rendered": "cloudy",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "High: ",
+            "32",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "High: ",
+          "32",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Low: ",
+            "98",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Low: ",
+          "98",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Close",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Close",
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <img
+            alt="showing cloudy conditions"
+            src="http://www.nordzenterprises.com/hometending/wp-content/uploads/2015/08/cool-backgrounds9-e1440776175281.jpg" />,
+          <p>
+            cloudy
+</p>,
+          <p>
+            High: 
+            32
+</p>,
+          <p>
+            Low: 
+            98
+</p>,
+          <button
+            onClick={[Function]}>
+            Close
+</button>,
+        ],
+        "className": "weather-card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "showing cloudy conditions",
+            "src": "http://www.nordzenterprises.com/hometending/wp-content/uploads/2015/08/cool-backgrounds9-e1440776175281.jpg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "cloudy",
+          },
+          "ref": null,
+          "rendered": "cloudy",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "High: ",
+              "32",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "High: ",
+            "32",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Low: ",
+              "98",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Low: ",
+            "98",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Close",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Close",
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;

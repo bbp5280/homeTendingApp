@@ -1,0 +1,790 @@
+exports[`CardCatalog snapshot should always match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Messages
+    clickEvent={[Function]}
+    message={
+        Object {
+            "houseid": 1,
+            "message": "Message",
+          }
+    } />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <p
+          className="message-text message-name">
+          <span
+                    className="line-title">
+                    Owner: 
+          </span>
+           
+</p>,
+        <p
+          className="message-text message-name message-friendly">
+          <span
+                    className="line-title">
+                    House: 
+          </span>
+           
+</p>,
+        <p
+          className="message-text">
+           
+</p>,
+        <p
+          className="message-text" />,
+        <button
+          className="view-forcast"
+          onClick={[Function]}>
+          View Forcast
+</button>,
+        false,
+        <input
+          className="message-input"
+          onChange={[Function]}
+          placeholder="date 1985-11-23"
+          type="date" />,
+        <input
+          className="message-input"
+          onChange={[Function]}
+          placeholder="Start Time 00:00:00"
+          type="time" />,
+        <input
+          className="message-input"
+          onChange={[Function]}
+          placeholder="End Time 00:00:00"
+          type="time" />,
+        <div
+          className="calendar">
+          <Add To Calendar
+                    buttonClassClosed="react-add-to-calendar__button"
+                    buttonClassOpen="react-add-to-calendar__button--light"
+                    buttonLabel="Add to My Calendar"
+                    buttonTemplate={
+                              Object {
+                                        "caret": "right",
+                                      }
+                    }
+                    buttonWrapperClass="react-add-to-calendar__wrapper"
+                    displayItemIcons={true}
+                    dropdownClass="react-add-to-calendar__dropdown"
+                    event={
+                              Object {
+                                        "description": undefined,
+                                        "endTime": "T-07:00",
+                                        "location": undefined,
+                                        "startTime": "T-07:00",
+                                        "title": undefined,
+                                      }
+                    }
+                    listItems={
+                              Array [
+                                        Object {
+                                          "apple": "Apple Calendar",
+                                        },
+                                        Object {
+                                          "google": "Google",
+                                        },
+                                        Object {
+                                          "outlook": "Outlook",
+                                        },
+                                        Object {
+                                          "outlookcom": "Outlook.com",
+                                        },
+                                        Object {
+                                          "yahoo": "Yahoo",
+                                        },
+                                      ]
+                    }
+                    optionsOpen={false}
+                    rootClass="react-add-to-calendar" />
+          <button
+                    className="scheduled"
+                    onClick={[Function]}>
+                    Scheduled
+          </button>
+</div>,
+      ],
+      "className": "message-cards",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span
+              className="line-title">
+              Owner: 
+</span>,
+            " ",
+            undefined,
+          ],
+          "className": "message-text message-name",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Owner: ",
+              "className": "line-title",
+            },
+            "ref": null,
+            "rendered": "Owner: ",
+            "type": "span",
+          },
+          " ",
+          undefined,
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span
+              className="line-title">
+              House: 
+</span>,
+            " ",
+            undefined,
+          ],
+          "className": "message-text message-name message-friendly",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "House: ",
+              "className": "line-title",
+            },
+            "ref": null,
+            "rendered": "House: ",
+            "type": "span",
+          },
+          " ",
+          undefined,
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            " ",
+            undefined,
+          ],
+          "className": "message-text",
+        },
+        "ref": null,
+        "rendered": Array [
+          " ",
+          undefined,
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+          "className": "message-text",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "View Forcast",
+          "className": "view-forcast",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "View Forcast",
+        "type": "button",
+      },
+      false,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "message-input",
+          "onChange": [Function],
+          "placeholder": "date 1985-11-23",
+          "type": "date",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "message-input",
+          "onChange": [Function],
+          "placeholder": "Start Time 00:00:00",
+          "type": "time",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "message-input",
+          "onChange": [Function],
+          "placeholder": "End Time 00:00:00",
+          "type": "time",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Add To Calendar
+              buttonClassClosed="react-add-to-calendar__button"
+              buttonClassOpen="react-add-to-calendar__button--light"
+              buttonLabel="Add to My Calendar"
+              buttonTemplate={
+                            Object {
+                                          "caret": "right",
+                                        }
+              }
+              buttonWrapperClass="react-add-to-calendar__wrapper"
+              displayItemIcons={true}
+              dropdownClass="react-add-to-calendar__dropdown"
+              event={
+                            Object {
+                                          "description": undefined,
+                                          "endTime": "T-07:00",
+                                          "location": undefined,
+                                          "startTime": "T-07:00",
+                                          "title": undefined,
+                                        }
+              }
+              listItems={
+                            Array [
+                                          Object {
+                                            "apple": "Apple Calendar",
+                                          },
+                                          Object {
+                                            "google": "Google",
+                                          },
+                                          Object {
+                                            "outlook": "Outlook",
+                                          },
+                                          Object {
+                                            "outlookcom": "Outlook.com",
+                                          },
+                                          Object {
+                                            "yahoo": "Yahoo",
+                                          },
+                                        ]
+              }
+              optionsOpen={false}
+              rootClass="react-add-to-calendar" />,
+            <button
+              className="scheduled"
+              onClick={[Function]}>
+              Scheduled
+</button>,
+          ],
+          "className": "calendar",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "buttonClassClosed": "react-add-to-calendar__button",
+              "buttonClassOpen": "react-add-to-calendar__button--light",
+              "buttonLabel": "Add to My Calendar",
+              "buttonTemplate": Object {
+                "caret": "right",
+              },
+              "buttonWrapperClass": "react-add-to-calendar__wrapper",
+              "displayItemIcons": true,
+              "dropdownClass": "react-add-to-calendar__dropdown",
+              "event": Object {
+                "description": undefined,
+                "endTime": "T-07:00",
+                "location": undefined,
+                "startTime": "T-07:00",
+                "title": undefined,
+              },
+              "listItems": Array [
+                Object {
+                  "apple": "Apple Calendar",
+                },
+                Object {
+                  "google": "Google",
+                },
+                Object {
+                  "outlook": "Outlook",
+                },
+                Object {
+                  "outlookcom": "Outlook.com",
+                },
+                Object {
+                  "yahoo": "Yahoo",
+                },
+              ],
+              "optionsOpen": false,
+              "rootClass": "react-add-to-calendar",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Scheduled",
+              "className": "scheduled",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Scheduled",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <p
+            className="message-text message-name">
+            <span
+                        className="line-title">
+                        Owner: 
+            </span>
+             
+</p>,
+          <p
+            className="message-text message-name message-friendly">
+            <span
+                        className="line-title">
+                        House: 
+            </span>
+             
+</p>,
+          <p
+            className="message-text">
+             
+</p>,
+          <p
+            className="message-text" />,
+          <button
+            className="view-forcast"
+            onClick={[Function]}>
+            View Forcast
+</button>,
+          false,
+          <input
+            className="message-input"
+            onChange={[Function]}
+            placeholder="date 1985-11-23"
+            type="date" />,
+          <input
+            className="message-input"
+            onChange={[Function]}
+            placeholder="Start Time 00:00:00"
+            type="time" />,
+          <input
+            className="message-input"
+            onChange={[Function]}
+            placeholder="End Time 00:00:00"
+            type="time" />,
+          <div
+            className="calendar">
+            <Add To Calendar
+                        buttonClassClosed="react-add-to-calendar__button"
+                        buttonClassOpen="react-add-to-calendar__button--light"
+                        buttonLabel="Add to My Calendar"
+                        buttonTemplate={
+                                    Object {
+                                                "caret": "right",
+                                              }
+                        }
+                        buttonWrapperClass="react-add-to-calendar__wrapper"
+                        displayItemIcons={true}
+                        dropdownClass="react-add-to-calendar__dropdown"
+                        event={
+                                    Object {
+                                                "description": undefined,
+                                                "endTime": "T-07:00",
+                                                "location": undefined,
+                                                "startTime": "T-07:00",
+                                                "title": undefined,
+                                              }
+                        }
+                        listItems={
+                                    Array [
+                                                Object {
+                                                  "apple": "Apple Calendar",
+                                                },
+                                                Object {
+                                                  "google": "Google",
+                                                },
+                                                Object {
+                                                  "outlook": "Outlook",
+                                                },
+                                                Object {
+                                                  "outlookcom": "Outlook.com",
+                                                },
+                                                Object {
+                                                  "yahoo": "Yahoo",
+                                                },
+                                              ]
+                        }
+                        optionsOpen={false}
+                        rootClass="react-add-to-calendar" />
+            <button
+                        className="scheduled"
+                        onClick={[Function]}>
+                        Scheduled
+            </button>
+</div>,
+        ],
+        "className": "message-cards",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span
+                className="line-title">
+                Owner: 
+</span>,
+              " ",
+              undefined,
+            ],
+            "className": "message-text message-name",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Owner: ",
+                "className": "line-title",
+              },
+              "ref": null,
+              "rendered": "Owner: ",
+              "type": "span",
+            },
+            " ",
+            undefined,
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span
+                className="line-title">
+                House: 
+</span>,
+              " ",
+              undefined,
+            ],
+            "className": "message-text message-name message-friendly",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "House: ",
+                "className": "line-title",
+              },
+              "ref": null,
+              "rendered": "House: ",
+              "type": "span",
+            },
+            " ",
+            undefined,
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              " ",
+              undefined,
+            ],
+            "className": "message-text",
+          },
+          "ref": null,
+          "rendered": Array [
+            " ",
+            undefined,
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "message-text",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "View Forcast",
+            "className": "view-forcast",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "View Forcast",
+          "type": "button",
+        },
+        false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "message-input",
+            "onChange": [Function],
+            "placeholder": "date 1985-11-23",
+            "type": "date",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "message-input",
+            "onChange": [Function],
+            "placeholder": "Start Time 00:00:00",
+            "type": "time",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "message-input",
+            "onChange": [Function],
+            "placeholder": "End Time 00:00:00",
+            "type": "time",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Add To Calendar
+                buttonClassClosed="react-add-to-calendar__button"
+                buttonClassOpen="react-add-to-calendar__button--light"
+                buttonLabel="Add to My Calendar"
+                buttonTemplate={
+                                Object {
+                                                "caret": "right",
+                                              }
+                }
+                buttonWrapperClass="react-add-to-calendar__wrapper"
+                displayItemIcons={true}
+                dropdownClass="react-add-to-calendar__dropdown"
+                event={
+                                Object {
+                                                "description": undefined,
+                                                "endTime": "T-07:00",
+                                                "location": undefined,
+                                                "startTime": "T-07:00",
+                                                "title": undefined,
+                                              }
+                }
+                listItems={
+                                Array [
+                                                Object {
+                                                  "apple": "Apple Calendar",
+                                                },
+                                                Object {
+                                                  "google": "Google",
+                                                },
+                                                Object {
+                                                  "outlook": "Outlook",
+                                                },
+                                                Object {
+                                                  "outlookcom": "Outlook.com",
+                                                },
+                                                Object {
+                                                  "yahoo": "Yahoo",
+                                                },
+                                              ]
+                }
+                optionsOpen={false}
+                rootClass="react-add-to-calendar" />,
+              <button
+                className="scheduled"
+                onClick={[Function]}>
+                Scheduled
+</button>,
+            ],
+            "className": "calendar",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "buttonClassClosed": "react-add-to-calendar__button",
+                "buttonClassOpen": "react-add-to-calendar__button--light",
+                "buttonLabel": "Add to My Calendar",
+                "buttonTemplate": Object {
+                  "caret": "right",
+                },
+                "buttonWrapperClass": "react-add-to-calendar__wrapper",
+                "displayItemIcons": true,
+                "dropdownClass": "react-add-to-calendar__dropdown",
+                "event": Object {
+                  "description": undefined,
+                  "endTime": "T-07:00",
+                  "location": undefined,
+                  "startTime": "T-07:00",
+                  "title": undefined,
+                },
+                "listItems": Array [
+                  Object {
+                    "apple": "Apple Calendar",
+                  },
+                  Object {
+                    "google": "Google",
+                  },
+                  Object {
+                    "outlook": "Outlook",
+                  },
+                  Object {
+                    "outlookcom": "Outlook.com",
+                  },
+                  Object {
+                    "yahoo": "Yahoo",
+                  },
+                ],
+                "optionsOpen": false,
+                "rootClass": "react-add-to-calendar",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Scheduled",
+                "className": "scheduled",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Scheduled",
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
