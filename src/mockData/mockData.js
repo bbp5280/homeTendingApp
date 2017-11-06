@@ -138,7 +138,7 @@ export const messages = [{
 },
 {
   id: 5,
-  houseID: 4, 
+  houseID: 4,
   message: {
     owner: 'The Dread Pirate Roberts',
     friendlyName:'House on the Hill',

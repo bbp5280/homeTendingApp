@@ -3,7 +3,8 @@
 }
 
 .aside{
-  width: 15%;
+  width: 10%;
+  height: 100vh;
   display: inline-block;
 }
 
@@ -11,13 +12,16 @@
   display: block;
 }
 
+section{
+  display: inline-block;
+  width: 70%;
+}
 .message-cards{
   padding: 1em;
-  width: 80%;
+  width: 90%;
   display: inline-block;
   margin: auto;
   border: 1px solid;
-  float: right;
 }
 
 .message-name{

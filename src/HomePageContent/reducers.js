@@ -15,21 +15,3 @@ export const messages = (state = [], action) => {
     return state;
   }
 };
-
-export const weather = (state = {}, action) => {
-  switch (action.type) {
-  case 'ADD_WEATHER':
-    return action.weather;
-  default:
-    return state;
-  }
-};
-
-export const invoices = (state = [], action) => {
-  switch (action.type) {
-  case 'ADD_INVOICE':
-    return action.invoice;
-  default:
-    return state;
-  }
-};

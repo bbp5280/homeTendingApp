@@ -1,13 +1,11 @@
 import { combineReducers } from 'redux';
-import { homes,
-  messages,
-  weather,
-  invoices} from './HomePageContent/reducers';
+import { homes, messages} from './HomePageContent/reducers';
+import { invoices } from './Catalog/reducers';
+
 
 
 export default combineReducers({
   homes,
   messages,
-  weather,
   invoices
 });

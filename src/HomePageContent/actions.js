@@ -13,7 +13,7 @@ export const addWeather = (weather) => ({
   weather
 });
 
-export const addInvoices = (invoice) => ({
-  type: 'ADD_INVOICE',
-  invoice
-});
+// export const addInvoices = (invoice) => ({
+//   type: 'ADD_INVOICE',
+//   invoice
+// });
