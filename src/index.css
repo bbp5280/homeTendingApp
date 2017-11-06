@@ -38,7 +38,7 @@ h1{
 }
 
 .log-in:hover{
-  color:#EEE1B3;
+  color:#B7AD89;
 }
 
 .background-img{
@@ -71,12 +71,53 @@ section{
   display: inline-block;
   width: 85%;
 }
+
 .message-cards{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #0A0908;
   background-color: #B7AD89;
   padding-left: 1em;
   width: 100%;
   display: inline-block;
   border: 1px solid;
+}
+
+.line-title{
+  font-weight: 600;
+}
+
+.react-add-to-calendar__wrapper{
+  width: 100%;
+  display: inline;
+}
+
+.react-add-to-calendar{
+  width: 100%;
+  display: inline;
+  padding: .5em;
+}
+
+.view-forcast{
+  margin-bottom: 1.5em;
+}
+
+.calendar{
+  display: inline-block;
+}
+
+button{
+  font-size: 14px;
+  margin: .5em;
+  border: 1px solid #0A0908;
+  border-radius: 0;
+  background-color: #B7AD89;
+  display: inline-block;
+  padding: .25em;
+}
+
+.scheduled{
+  margin-right: 3em;
 }
 
 .message-name{

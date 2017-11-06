@@ -67,18 +67,20 @@ class Messages extends Component {
     return (
       <article className='message-cards'>
         <p className='message-text message-name'>
-          {this.props.message.message.owner}
+          <span className='line-title'>
+            Owner: </span> {this.props.message.message.owner}
         </p>
         <p className='message-text message-name message-friendly'>
-          {this.props.message.message.friendlyName}
+          <span className='line-title'>
+            House: </span> {this.props.message.message.friendlyName}
         </p>
-        <p className='message-text'>
-          {this.props.message.message.title}
+        <p className='message-text'> {this.props.message.message.title}
         </p>
         <p className='message-text'>
           {this.props.message.message.body}
         </p>
-        <button onClick={this.handleModal.bind(this)}>
+        <button onClick={this.handleModal.bind(this)}
+          className='view-forcast'>
           View Forcast
         </button>
         {this.state.modalOpen && <Weather
@@ -99,11 +101,12 @@ class Messages extends Component {
           onChange={(event) => { this.handleInput('endTime', event); }}
           className='message-input'
         />
-        <div>
+        <div className='calendar'>
           <AddToCalendar event={this.setEvent()}/>
           <button
             onClick={(message) => this.props.clickEvent(
-              this.updatedMessageObject())}>
+              this.updatedMessageObject())}
+            className='scheduled'>
             Scheduled
           </button>
         </div>

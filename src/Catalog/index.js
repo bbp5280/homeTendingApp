@@ -15,8 +15,8 @@ import PropTypes from 'prop-types';
 
 class Catalog extends Component{
   componentDidMount(){
-    // this.props.addHouses(homes);
-    // this.props.addMessages(messages);
+    this.props.addHouses(homes);
+    this.props.addMessages(messages);
   }
 
 
