@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import AddToCalendar from 'react-add-to-calendar';
+import  Weather  from '../Weather/index';
+
 
 
 class Messages extends Component {
@@ -12,15 +14,23 @@ class Messages extends Component {
       description: '',
       date:'',
       startTime:'',
-      endTime: ''
+      endTime: '',
+      modalOpen: false
     };
   }
 
-  componentDidMount(){
+  async componentDidMount(){
     this.setState({
       title: this.props.message.message.title,
       location: this.props.message.message.address,
       description: this.props.message.message.body
+    });
+  }
+
+  handleModal(event){
+    event.preventDefault();
+    this.setState({
+      modalOpen: !this.state.modalOpen
     });
   }
 
@@ -57,13 +67,23 @@ class Messages extends Component {
     return (
       <article className='message-cards'>
         <p className='message-text message-name'>
-          {this.props.message.message.owner}</p>
+          {this.props.message.message.owner}
+        </p>
         <p className='message-text message-name message-friendly'>
-          {this.props.message.message.friendlyName}</p>
+          {this.props.message.message.friendlyName}
+        </p>
         <p className='message-text'>
-          {this.props.message.message.title}</p>
+          {this.props.message.message.title}
+        </p>
         <p className='message-text'>
-          {this.props.message.message.body}</p>
+          {this.props.message.message.body}
+        </p>
+        <button onClick={this.handleModal.bind(this)}>
+          View Forcast
+        </button>
+        {this.state.modalOpen && <Weather
+          cancel={this.handleModal.bind(this)}
+          message={this.props.message.message}/>}
         <input type='date'
           placeholder='date 1985-11-23'
           onChange={(event) => { this.handleInput('date', event); }}
@@ -82,7 +102,8 @@ class Messages extends Component {
         <div>
           <AddToCalendar event={this.setEvent()}/>
           <button
-            onClick={(message) => this.props.clickEvent(this.updatedMessageObject())}>
+            onClick={(message) => this.props.clickEvent(
+              this.updatedMessageObject())}>
             Scheduled
           </button>
         </div>

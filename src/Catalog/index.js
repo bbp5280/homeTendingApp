@@ -15,7 +15,7 @@ import PropTypes from 'prop-types';
 class Catalog extends Component{
   async componentDidMount(){
     this.props.addHouses(homes);
-    // this.props.addMessages(messages);
+    this.props.addMessages(messages);
   }
 
 
@@ -25,7 +25,7 @@ class Catalog extends Component{
       return <AddComponent message={toDisplay}
         clickEvent={this.addMessagesToProperty.bind(this)}
         home={toDisplay}
-        key={index + Date.now()}/>;
+        key={toDisplay.id}/>;
     });
   }
 
@@ -53,6 +53,7 @@ class Catalog extends Component{
       });
     }
   }
+
 
   removeMessage(message){
     this.props.messages.splice(message, 1);
