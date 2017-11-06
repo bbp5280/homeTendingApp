@@ -8,6 +8,7 @@ class Homes extends Component  {
     this.state = {
       modalOpen: false
     };
+    this.handleModal.bind(this);
   }
 
   handleModal(event){
@@ -31,8 +32,8 @@ class Homes extends Component  {
           {this.props.home.stateShort}
           {this.props.home.zip}</p>
         <p className='message-text'>
-          Bendrooms {this.props.home.bedrooms}
-          Bathrooms {this.props.home.bathrooms}</p>
+          Bendrooms: {this.props.home.bedrooms}
+          Bathrooms: {this.props.home.bathrooms}</p>
         <p className='message-text'>
           {this.props.home.discription}</p>
         <button onClick={this.handleModal.bind(this)}>Create Invoice</button>
