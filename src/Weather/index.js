@@ -26,18 +26,21 @@ class Weather extends Component {
   }
 
   buildWeatherCards (forcast) {
-    return forcast.map(day => {
+    return forcast.map((day, index) => {
       return <WeatherCard high={day.high.fahrenheit}
         low={day.low.fahrenheit}
         conditions={day.conditions}
-        icon={day.icon_url} />;
+        icon={day.icon_url}
+        close={this.props.close}
+        key={`${day.low.fahrenheit}${day.high.fahrenheit}${index}`}
+      />;
     });
   }
 
   render(){
     return (
-      <div className='outer-modal'>
-        <div className='inner-modal'>
+      <div className='outer-weather-modal'>
+        <div className='inner-weather-modal'>
           {this.buildWeatherCards(this.state.weatherForcast)}
         </div>
       </div>
@@ -46,7 +49,8 @@ class Weather extends Component {
 }
 
 Weather.propTypes = {
-  message: PropTypes.object
+  message: PropTypes.object,
+  close: PropTypes.func
 };
 
 export default Weather;

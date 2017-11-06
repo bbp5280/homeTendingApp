@@ -1,27 +1,133 @@
-.header{
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Yrsa:400,600');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #2F394D;
 }
 
-.aside{
-  width: 10%;
-  height: 100vh;
+.header{
+  width: 100%;
+  text-align: center;
+  background-color: #56666B;
+  padding-top: 1em;
+  padding-bottom: .75em;
+  display: flex;
+  justify-content: center;
+}
+
+h1{
+  align-self: center;
+  font-family: 'Yrsa', serif;
+  font-weight: 600;
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #841E32;
   display: inline-block;
 }
 
+.log-in-div{
+  align-self: baseline;
+  margin-top: .5em;
+}
+
+.log-in{
+  color:#2F394D;
+}
+
+.log-in:hover{
+  color:#B7AD89;
+}
+
+.background-img{
+  background-image: url('http://www.nordzenterprises.com/hometending/wp-content/uploads/2015/08/cool-backgrounds9-e1440776175281.jpg');
+}
+.hompage-background{
+  width:100%;
+  height:500px;
+}
+
+.aside{
+  width: 13.5%;
+  display: inline-block;
+  float: left;
+}
+
+
 .side-nav{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color:#B7AD89;
+  padding: 1em;
+  background-color: #841E32;
+  width: 100%;
   display: block;
+  border-bottom: 2px solid #B7AD89;
 }
 
 section{
   display: inline-block;
-  width: 70%;
+  width: 85%;
 }
+
 .message-cards{
-  padding: 1em;
-  width: 90%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #0A0908;
+  background-color: #B7AD89;
+  padding-left: 1em;
+  width: 100%;
   display: inline-block;
-  margin: auto;
   border: 1px solid;
+}
+
+.line-title{
+  font-weight: 600;
+}
+
+.react-add-to-calendar__wrapper{
+  width: 100%;
+  display: inline;
+}
+
+.react-add-to-calendar{
+  width: 100%;
+  display: inline;
+  padding: .5em;
+}
+
+.view-forcast{
+  margin-bottom: 1.5em;
+}
+
+.calendar{
+  display: inline-block;
+}
+
+button{
+  font-size: 14px;
+  margin: .5em;
+  border: 1px solid #0A0908;
+  border-radius: 0;
+  background-color: #B7AD89;
+  display: inline-block;
+  padding: .25em;
+}
+
+input{
+  font-size: 14px;
+  margin: .5em;
+  border: 1px solid #0A0908;
+  border-radius: 0;
+  background-color: #B7AD89;
+  display: inline-block;
+  padding: .15em;
+}
+
+.scheduled{
+  margin-right: 3em;
 }
 
 .message-name{
@@ -66,4 +172,33 @@ section{
   bottom: 25%;
   margin: auto;
   background: white;
+}
+
+.inner-weather-modal{
+  display: flex;
+  position: absolute;
+  left: 10%;
+  right: 11%;
+  top: 30%;
+  bottom: 35%;
+  margin: auto;
+  background: white;
+}
+
+.outer-weather-modal{
+  position: fixed;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ margin: auto;
+ background-color: rgba(0,0,0, 0.5);
+}
+
+.weather-card{
+  text-align: center;
+  width: 15%;
+  border: 1px solid #0A0908;
 }

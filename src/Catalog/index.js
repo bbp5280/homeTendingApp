@@ -15,8 +15,8 @@ import PropTypes from 'prop-types';
 
 class Catalog extends Component{
   componentDidMount(){
-    // this.props.addHouses(homes);
-    // this.props.addMessages(messages);
+    this.props.addHouses(homes);
+    this.props.addMessages(messages);
   }
 
 
@@ -37,7 +37,6 @@ class Catalog extends Component{
     if (messageOrInvoice.message){
       this.removeMessage(messageOrInvoice);
     } else if (!messageOrInvoice.message) {
-      console.log('click');
       addInvoices(messageOrInvoice);
     }
   }
@@ -65,7 +64,7 @@ class Catalog extends Component{
 
   render() {
     return (
-      <section>
+      <section className='catalog'>
         {this.props.location.pathname === '/admin/messages' &&
         this.buildCards(this.props.messages, Messages)}
         {this.props.location.pathname === '/admin/properties' &&
