@@ -49,7 +49,7 @@ class Weather extends Component {
 }
 
 Weather.propTypes = {
-  message: PropTypes.object,
+  message: PropTypes.array,
   close: PropTypes.func
 };
 

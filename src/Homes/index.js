@@ -22,8 +22,7 @@ class Homes extends Component  {
     return (
       <article className='message-cards'>
         <p className='message-text message-name'>
-          {this.props.home.ownerFirst}
-          {this.props.home.ownerLast}</p>
+          {this.props.home.ownerFirst} {this.props.home.ownerLast}</p>
         <p className='message-text message-name message-friendly'>
           {this.props.home.friendlyName}</p>
         <p className='message-text'>
