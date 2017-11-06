@@ -6,7 +6,6 @@ export default class CreateInvoice extends Component{
   constructor(){
     super();
     this.state = {
-      invoiceNumber: 0,
       houseID: '',
       houseAddress: '',
       homeOwner: '',

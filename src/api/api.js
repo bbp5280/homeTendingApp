@@ -7,5 +7,5 @@ export const fetchWeather = (location) => {
     .then(parsedData => parsedData)
     .then(finalData => finalData.forecast.simpleforecast.forecastday
       .splice(0, 7))
-    .catch(error => console.log(error));
+    .catch(error => error);
 };
