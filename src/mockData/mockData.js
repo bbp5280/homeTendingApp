@@ -152,4 +152,11 @@ export const messages = [{
   }
 }];
 
-export const invoices = [];
+export const invoices = {houseID: '1',
+  houseAddress: '123 street',
+  homeOwner: 'Jane Doe',
+  homeFriendlyName: 'Ragnar Rock',
+  descriptionOfWork: 'Did Some Work',
+  runningTotal:[{lineitem:'wood',
+    amount:'12'}],
+  date: '11/11/11'};

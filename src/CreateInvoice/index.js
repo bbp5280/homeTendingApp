@@ -129,5 +129,6 @@ export default class CreateInvoice extends Component{
 CreateInvoice.propTypes = {
   cancel: PropTypes.func,
   home: PropTypes.object,
-  submitInvoices: PropTypes.func
+  submitInvoices: PropTypes.func,
+  submitInvoice: PropTypes.func
 };

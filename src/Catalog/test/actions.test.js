@@ -11,8 +11,7 @@ describe('Invoice Action', () => {
         descriptionOfWork: 'Did Some Work',
         runningTotal:[{lineitem:'wood',
           amount:'12'}],
-        date: '11/11/11'}
-    ;
+        date: '11/11/11'};
     const expected = {
       type: 'ADD_INVOICES',
       invoice:

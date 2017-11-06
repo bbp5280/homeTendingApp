@@ -8,6 +8,7 @@ class Homes extends Component  {
     this.state = {
       modalOpen: false
     };
+    this.handleModal.bind(this);
   }
 
   handleModal(event){

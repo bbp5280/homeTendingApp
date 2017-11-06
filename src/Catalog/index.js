@@ -7,30 +7,26 @@ import {
   addMessages
 } from '../HomePageContent/actions';
 import { addInvoices } from './actions';
-import {
-  homes,
-  messages
-} from '../mockData/mockData';
 import PropTypes from 'prop-types';
 
 class Catalog extends Component{
-  componentDidMount(){
-    this.props.addHouses(homes);
-    this.props.addMessages(messages);
-  }
+  constructor(){
+    super();
 
+    this.addMessagesOrInvoiceToProperty = this.addMessagesOrInvoiceToProperty.bind(this);
+  }
 
 
   buildCards (display, AddComponent){
     return display.map((toDisplay, index) => {
       return <AddComponent message={toDisplay}
-        clickEvent={this.addMessagesToProperty.bind(this)}
+        clickEvent={this.addMessagesOrInvoiceToProperty}
         home={toDisplay}
         key={toDisplay.id}/>;
     });
   }
 
-  addMessagesToProperty(messageOrInvoice){
+  addMessagesOrInvoiceToProperty(messageOrInvoice){
     this.props.addHouses(
       this.updateHomeWithMessage(messageOrInvoice)
     );

@@ -1,13 +1,13 @@
 import * as reducers from '../reducers';
 
-describe('Houses Reducer', () => {
+describe('Invoices Reducer', () => {
   it('invoices should set default state', () => {
     const expectation = [];
 
     expect(reducers.invoices(undefined, {})).toEqual(expectation);
   });
 
-  it('GOTHouses should add houses to state', () => {
+  it('invoices reducer should add invoices to state', () => {
     const action = {
       type: 'ADD_INVOICES',
       invoice:
