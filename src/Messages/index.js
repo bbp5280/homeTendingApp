@@ -84,7 +84,7 @@ class Messages extends Component {
           View Forcast
         </button>
         {this.state.modalOpen && <Weather
-          cancel={this.handleModal.bind(this)}
+          close={this.handleModal.bind(this)}
           message={this.props.message.message}/>}
         <input type='date'
           placeholder='date 1985-11-23'

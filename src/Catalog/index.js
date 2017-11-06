@@ -37,7 +37,6 @@ class Catalog extends Component{
     if (messageOrInvoice.message){
       this.removeMessage(messageOrInvoice);
     } else if (!messageOrInvoice.message) {
-      console.log('click');
       addInvoices(messageOrInvoice);
     }
   }
