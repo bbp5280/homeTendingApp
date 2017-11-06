@@ -77,6 +77,12 @@ export default class CreateInvoice extends Component{
     }, 0);
   }
 
+  submitInvoices(event){
+    event.preventDefault();
+    this.props.submitInvoice(this.state);
+    this.props.cancel(event);
+  }
+
 
   render () {
     return (
@@ -112,7 +118,7 @@ export default class CreateInvoice extends Component{
           <button onClick={(event) => this.props.cancel(event)}>
             Cancel
           </button>
-          <button onClick={(state) => this.props.submitInvoice(this.state)}>
+          <button onClick={(event) => this.submitInvoices(event)}>
             Submit
           </button>
         </form>
@@ -124,5 +130,5 @@ export default class CreateInvoice extends Component{
 CreateInvoice.propTypes = {
   cancel: PropTypes.func,
   home: PropTypes.object,
-  submitInvoice: PropTypes.func
+  submitInvoices: PropTypes.func
 };

@@ -6,6 +6,7 @@ import {
   addHouses,
   addMessages
 } from '../HomePageContent/actions';
+import { addInvoices } from './actions';
 import {
   homes,
   messages
@@ -13,9 +14,9 @@ import {
 import PropTypes from 'prop-types';
 
 class Catalog extends Component{
-  async componentDidMount(){
-    this.props.addHouses(homes);
-    this.props.addMessages(messages);
+  componentDidMount(){
+    // this.props.addHouses(homes);
+    // this.props.addMessages(messages);
   }
 
 
@@ -35,6 +36,9 @@ class Catalog extends Component{
     );
     if (messageOrInvoice.message){
       this.removeMessage(messageOrInvoice);
+    } else if (!messageOrInvoice.message) {
+      console.log('click');
+      addInvoices(messageOrInvoice);
     }
   }
 
@@ -82,12 +86,14 @@ Catalog.propTypes = {
 
 const mapStateToProps =  (store) => ({
   messages: store.messages,
-  homes: store.homes
+  homes: store.homes,
+  invoices: store.invoices
 });
 
 const mapDispatchToProps = (dispatch) => ({
   addHouses: (homes) => { dispatch(addHouses(homes)); },
-  addMessages: (messages) => { dispatch(addMessages(messages)); }
+  addMessages: (messages) => { dispatch(addMessages(messages)); },
+  addInvoices: (invoice) => { dispatch(addInvoices(invoice)); }
 });
 
 

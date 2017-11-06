@@ -6,10 +6,9 @@ export const WeatherCard = ({high,
   conditions,
   icon}) => {
 
-    console.log(high);
   return (
     <div>
-      <img src={icon} alt={`image showing ${conditions} conditions`} />
+      <img src={icon} alt={`showing ${conditions} conditions`} />
       <p>{conditions}</p>
       <p>High: {high}</p>
       <p>Low: {low}</p>
