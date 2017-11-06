@@ -65,7 +65,7 @@ class Catalog extends Component{
 
   render() {
     return (
-      <section>
+      <section className='catalog'>
         {this.props.location.pathname === '/admin/messages' &&
         this.buildCards(this.props.messages, Messages)}
         {this.props.location.pathname === '/admin/properties' &&

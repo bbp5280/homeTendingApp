@@ -10,7 +10,7 @@ const Aside = () => {
       <NavLink to='/admin/properties'
         className='side-nav'>Properties</NavLink>
       <NavLink to='/admin/create-invoice'
-        className='side-nav'>Create Invoice</NavLink>
+        className='side-nav'>Invoices</NavLink>
     </aside>
   );
 };

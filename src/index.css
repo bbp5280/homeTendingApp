@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Yrsa:400,600');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
 
 body {
   margin: 0;
@@ -49,24 +50,32 @@ h1{
 }
 
 .aside{
-  width: 10%;
+  width: 15%;
   display: inline-block;
   float: left;
 }
 
+
 .side-nav{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color:#B7AD89;
+  padding: 1em;
+  background-color: #841E32;
+  width: 100%;
   display: block;
+  border-bottom: 2px solid #B7AD89;
 }
 
 section{
   display: inline-block;
-  width: 70%;
+  width: 85%;
 }
 .message-cards{
-  padding: 1em;
-  width: 90%;
+  background-color: #B7AD89;
+  padding-left: 1em;
+  width: 100%;
   display: inline-block;
-  margin-left: 20px;
   border: 1px solid;
 }
 
