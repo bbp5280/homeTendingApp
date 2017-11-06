@@ -10,7 +10,7 @@ import {
   addMessages
 } from './actions';
 import { addInvoices } from '../Catalog/actions';
-import { Link } from 'react-router-dom';
+
 
 class HomePageContent extends Component{
 
@@ -23,9 +23,10 @@ class HomePageContent extends Component{
 
   render(){
     return (
-      <div>
-        <Link to='/admin/messages'>Log In </Link>
-      home page
+      <div className='hompage-background'>
+        <div className='backgroud-img'></div>
+        <img src={'http://www.nordzenterprises.com/hometending/wp-content/uploads/2015/08/cool-backgrounds9-e1440776175281.jpg'} alt='Carribian Homes' width='100%'/>
+
       </div>
     );
   }
