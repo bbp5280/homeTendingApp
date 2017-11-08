@@ -1,18 +1,34 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+class Header extends Component {
+  constructor(){
+    super();
+    this.state = {
+      showLogIn: true
+    };
+  }
+  handleShowLogIn(){
+    this.setState({
+      showLogIn:!this.state.showLogIn
+    });
+  }
 
-  return (
-    <header className='header'>
-      <div>
-        <h1>HOME TENDING</h1>
-        <div className='log-in-div'>
-          <Link to='/admin/messages' className='log-in'>Log In </Link>
+  render(){
+    console.log(this.state);
+    return (
+      <header className='header'>
+        <div>
+          <h1>HOME TENDING</h1>
+          <div className='log-in-div'>
+            { this.state.showLogIn &&
+            <Link to='/admin/messages' className='log-in' onClick={() => this.handleShowLogIn()}>Log In </Link>
+          }
+          </div>
         </div>
-      </div>
-    </header>
-  );
-};
+      </header>
+    );
+  }
+}
 
 export default Header;
