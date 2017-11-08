@@ -65,7 +65,7 @@ export const homes = [{
   friendlyName:'House on the Hill',
   bedrooms:3,
   bathrooms:2,
-  discription:`Beautiful home with great views of the vally. New master bathroom and a large deck with
+  discription:`Beautiful home with great views of the valley. New master bathroom and a large deck with
   lots of plants that need watered at least twice a week more when it is hot. In serious danger from
   fire if the sonoma fires were to happen in marin county.`
 }];

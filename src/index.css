@@ -175,14 +175,22 @@ input{
 }
 
 .inner-weather-modal{
-  display: flex;
   position: absolute;
   left: 10%;
-  right: 11%;
-  top: 30%;
-  bottom: 35%;
+  right: 10%;
+  top: 20%;
+  bottom: 30%;
   margin: auto;
   background: white;
+  text-align: center;
+}
+
+.weather-card-wrapper{
+  display: flex;
+}
+
+.close-button{
+  margin-top: .75em;
 }
 
 .outer-weather-modal{
