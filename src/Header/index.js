@@ -15,7 +15,6 @@ class Header extends Component {
   }
 
   render(){
-    console.log(this.state);
     return (
       <header className='header'>
         <div>
@@ -23,7 +22,7 @@ class Header extends Component {
           <div className='log-in-div'>
             { this.state.showLogIn &&
             <Link to='/admin/messages' className='log-in' onClick={() => this.handleShowLogIn()}>Log In </Link>
-          }
+            }
           </div>
         </div>
       </header>

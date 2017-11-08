@@ -31,7 +31,7 @@ class Weather extends Component {
         low={day.low.fahrenheit}
         conditions={day.conditions}
         icon={day.icon_url}
-        close={this.props.close}
+        day={day.date.weekday}
         key={`${day.low.fahrenheit}${day.high.fahrenheit}${index}`}
       />;
     });
@@ -41,7 +41,11 @@ class Weather extends Component {
     return (
       <div className='outer-weather-modal'>
         <div className='inner-weather-modal'>
-          {this.buildWeatherCards(this.state.weatherForcast)}
+          <h2>7 Day Forcast</h2>
+          <div className='weather-card-wrapper'>
+            {this.buildWeatherCards(this.state.weatherForcast)}
+          </div>
+          <button onClick={this.props.close} className='close-button'>Close</button>
         </div>
       </div>
     );
@@ -49,7 +53,7 @@ class Weather extends Component {
 }
 
 Weather.propTypes = {
-  message: PropTypes.array,
+  message: PropTypes.object,
   close: PropTypes.func
 };
 
