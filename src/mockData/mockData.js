@@ -12,11 +12,8 @@ export const homes = [{
   friendlyName:'Skelitor House',
   bedrooms:3,
   bathrooms:2,
-  discription:`Heyyyyy, hermano. Yeah, like I'm going to take a whiz through
-  this $5,000 suit. COME ON. Te quiero. English, please. I love you! Great, now
-  I'm late. And don't make the water too hot. The scabs come right off. Could it
-   be love? I know what an erection feels like, Michael. No, it's the opposite.
-   It's like my heart is getting hard. It's OUR nausea.`
+  discription:`Middle section of a triplex. Heating system and water heater are old
+  with known issues. Owner waiting to replace until 2018.`
 },
 {
   id: 2,
@@ -32,11 +29,9 @@ export const homes = [{
   friendlyName:'House of Stumps',
   bedrooms:4,
   bathrooms:2,
-  discription:`GENE!! [screams] He's going to be all right. The only thing I
-  found in the fridge was a dead dove in a bag. Gob: You didn't eat that, did
-  you? Let the great experiment begin! Heyyyy Uncle Father Oscar. I hear the
-  jury's still out on science. She's a contestant. It's sorta like an inner
-  beauty pageant. Ah, there it is.`
+  discription:`90 + year old house. Owner refuses to remove the stumps all over the
+  property because it "gives charicter." Guest sometimes trip on them while coming
+  home after parting downtown.`
 },
 {
   id: 3,
@@ -52,11 +47,9 @@ export const homes = [{
   friendlyName:'Adobe House',
   bedrooms:4,
   bathrooms:3,
-  discription:`There are dozens of us! DOZENS! It was for me. I was going to
-  smoke the marijuana like a cigarette. I never thought I'd miss a hand so much!
-   Hey, look at that – you're mean sober, too. Butterscotch! Want a lick?
-  I know, I just call her Annabelle cause she's shaped like a…she's the belle
-  of the ball! You just made a fool out of yourself in front of T-Bone.`
+  discription:`20 year old adobe with new kitchen and hvac system. The home is
+  15 miles ouside of town with great views. Do not bring the dog unless you
+  want to clean up dead quails after the dog gets in the bushes.`
 },
 {
   id: 4,
@@ -72,11 +65,9 @@ export const homes = [{
   friendlyName:'House on the Hill',
   bedrooms:3,
   bathrooms:2,
-  discription:`One of the guys told me to take my head out of my BOTTOM and get
-  back to work…my BOTTOM! Hahahaha. Pound is tic-tac-toe, right? Are you aware
-  of this? Coming soon. Indeed. If I wanted something your thumb touched I'd
-  eat the inside of your ear. I'm an ideas man, Michael. A trick is something a
-  whore does for money.`
+  discription:`Beautiful home with great views of the vally. New master bathroom and a large deck with
+  lots of plants that need watered at least twice a week more when it is hot. In serious danger from
+  fire if the sonoma fires were to happen in marin county.`
 }];
 
 export const messages = [{
@@ -88,9 +79,8 @@ export const messages = [{
     address: '4183 W. Walsh Pl. Denver, CO 80128',
     houseID: 1,
     title:'Stock firewood for arrival',
-    body:`Yeah, and if you were the pope they'd be all, "Straighten your pope
-    hat." And "Put on your good vestments." I was having the most wonderful
-    dream. Except you were there, and you were there, and you were there!`
+    body:`We will be in on the 21st please have 12 cords of firewood ready for
+    our 3 night stay.`
   }
 },
 {
@@ -102,10 +92,8 @@ export const messages = [{
     address: '4183 W. Walsh Pl. Denver, CO 80128',
     houseID: 1,
     title:'Have fireplace cleaned',
-    body:`For one beautiful night I knew what it was like to be a grandmother.
-    Subjugated, yet honored. I love this planet! I've got wealth, fame, and
-    access to the depths of sleaze that those things bring. But existing is
-    basically all I do!`
+    body:`Clearly we we burn a ton of wood.
+    Please have the fireplace cleaned before our arrival.`
   }
 },
 {
@@ -117,9 +105,8 @@ export const messages = [{
     address: '4 Counchas Loop Santa Fe, NM 59715',
     houseID: 3,
     title:'Blow out sprinklers',
-    body:`Your best is an idiot! Oh yeah, good luck with that. Why would a
-    robot need to drink? I guess if you want children beaten, you have to do it
-    yourself. And until then, I can never die?`
+    body:`We just saw it was snowing for the next 10 days. I know you reached out to us about this and we didn't respond, but
+    can you blow out the sprinklers so the pipes don't freeze.`
   }
 },
 {
@@ -131,9 +118,7 @@ export const messages = [{
     address: '401 W. Lamme Bozeman, MT 80128',
     houseID: 2,
     title:'Turn on the furnace',
-    body:`So I really am important? How I feel when I'm drunk is correct? Okay,
-    it's 500 dollars, you have no choice of carrier, the battery can't hold the
-    charge and the reception isn't very… You are the last hope of the universe.`
+    body:`Please have our furnace turned on.`
   }
 },
 {
@@ -145,10 +130,8 @@ export const messages = [{
     address: '44 Glenn Dr. Fairfax, CA 94930',
     houseID: 4,
     title:'Stock fridge for arrival',
-    body:`Check it out, y'all. Everyone who was invited is here. Hey, guess what
-     you're accessories to. Do a flip! Come, Comrade Bender! We must take to
-     the streets! Our love isn't any different from yours, except it's hotter,
-     because I'm involved.`
+    body:`We will be arriving on the 10th of December and we would like you to stock the fridge with
+    vodka and bourbon. We could also use some saltine crackers`
   }
 }];
 
@@ -156,7 +139,10 @@ export const invoices = {houseID: '1',
   houseAddress: '123 street',
   homeOwner: 'Jane Doe',
   homeFriendlyName: 'Ragnar Rock',
-  descriptionOfWork: 'Did Some Work',
+  descriptionOfWork: 'stocked',
   runningTotal:[{lineitem:'wood',
-    amount:'12'}],
+    amount:'12'}, {
+    lineitem: 'tripCharge',
+    amount: '900'
+  }],
   date: '11/11/11'};
