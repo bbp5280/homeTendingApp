@@ -63,9 +63,11 @@ export default class CreateInvoice extends Component{
 
   buildLineItems(){
     return this.state.runningTotal.map(item => {
-      return <div key={`${item.lineItem}${item.amount}`}>
-        <p>{item.lineItem}</p>
-        <p>{item.amount}</p>
+      return <div
+        className='line-item-wrapper'
+        key={`${item.lineItem}${item.amount}`}>
+        <p className='line-items'>{item.lineItem}</p>
+        <p className='line-items'>{item.amount}</p>
       </div>;
     });
   }
@@ -87,21 +89,24 @@ export default class CreateInvoice extends Component{
     return (
       <div className='outer-modal'>
         <form className='inner-modal'>
-          <p>Owner: {this.state.homeOwner}</p>
-          <p>HouseName: {this.state.homeFriendlyName}</p>
-          <p>Address: {this.state.houseAddress}</p>
+          <p className='invoice' >Owner: {this.state.homeOwner}</p>
+          <p className='invoice'>HouseName: {this.state.homeFriendlyName}</p>
+          <p className='invoice'>Address: {this.state.houseAddress}</p>
           <input type='text'
+            className='invoice-input description'
             placeholder='Description of work'
             onChange={(event) => {
               this.handleInvoiceInput('descriptionOfWork', event);
             }}/>
           <input type='text'
+            className='invoice-input'
             placeholder='Line Item'
             onChange={(event) => {
               this.handleInvoiceInput('lineItem', event);
             }}
             value={this.state.lineItem}/>
           <input type='number'
+            className='invoice-input'
             min='0.00'
             step='0.01'
             placeholder='Amount'
@@ -109,15 +114,18 @@ export default class CreateInvoice extends Component{
               this.handleInvoiceInput('amount', event);
             }}
             value={this.state.amount}/>
-          <button onClick={(event) => this.updateRunningTotal(event)}>
+          <button onClick={(event) => this.updateRunningTotal(event)}
+            className='invoice-input'>
             Add
           </button>
           {this.buildLineItems()}
-          <p>Total: {this.calculateTotal()}</p>
-          <button onClick={(event) => this.props.cancel(event)}>
+          <p className='total invoice'>Total: {this.calculateTotal()}</p>
+          <button onClick={(event) => this.props.cancel(event)}
+            className='invoice-input'>
             Cancel
           </button>
-          <button onClick={(event) => this.submitInvoices(event)}>
+          <button onClick={(event) => this.submitInvoices(event)}
+            className='invoice-input'>
             Submit
           </button>
         </form>
