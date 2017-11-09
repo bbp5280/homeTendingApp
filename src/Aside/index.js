@@ -9,7 +9,7 @@ const Aside = () => {
         className='side-nav'>Messages</NavLink>
       <NavLink to='/admin/properties'
         className='side-nav'>Properties</NavLink>
-      <NavLink to='/admin/create-invoice'
+      <NavLink to='/admin/invoices'
         className='side-nav'>Invoices</NavLink>
     </aside>
   );
