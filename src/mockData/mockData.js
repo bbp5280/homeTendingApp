@@ -135,7 +135,7 @@ export const messages = [{
   }
 }];
 
-export const invoices = {houseID: '1',
+export const invoices = [{houseID: '1',
   houseAddress: '123 street',
   homeOwner: 'Jane Doe',
   homeFriendlyName: 'Ragnar Rock',
@@ -145,4 +145,16 @@ export const invoices = {houseID: '1',
     lineitem: 'tripCharge',
     amount: '900'
   }],
-  date: '11/11/11'};
+  date: '11/11/11'},
+{
+  houseID: '2',
+  houseAddress: '678 something',
+  homeOwner: 'John Doe',
+  homeFriendlyName: 'Sugaree',
+  descriptionOfWork: 'Get food',
+  runningTotal:[{lineitem:'Food',
+    amount:'23'}, {
+    lineitem: 'tripCharge',
+    amount: '900'
+  }],
+  date: '12/12/12'}];

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Messages from '../Messages/index';
 import Homes from '../Homes/index';
+import { Invoices } from '../Invoices/index';
 import {
   addHouses,
   addMessages
@@ -21,6 +22,7 @@ class Catalog extends Component{
       return <AddComponent message={toDisplay}
         clickEvent={this.addMessagesOrInvoiceToProperty}
         home={toDisplay}
+        invoices={toDisplay}
         key={toDisplay.id}/>;
     });
   }
@@ -64,6 +66,8 @@ class Catalog extends Component{
         this.buildCards(this.props.messages, Messages)}
         {this.props.location.pathname === '/admin/properties' &&
         this.buildCards(this.props.homes, Homes)}
+        {this.props.location.pathname === '/admin/invoices' &&
+        this.buildCards(this.props.invoices, Invoices)}
       </section>
     );
   }
@@ -75,7 +79,8 @@ Catalog.propTypes = {
   location: PropTypes.object,
   addHouses: PropTypes.func,
   addMessages: PropTypes.func,
-  messageToCards: PropTypes.func
+  messageToCards: PropTypes.func,
+  invoices: PropTypes.array
 };
 
 const mapStateToProps =  (store) => ({
